@@ -1,0 +1,23 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.todolist1.MenuController">
+<headerText>
+    Fill in the blanks and press accept to save or cancel to abort
+</headerText>
+<content>
+    <GridPane vgap="10" hgap = "10">
+        <Label text="Task description" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="descriptionArea" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Details" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextArea fx:id="detailsArea" GridPane.rowIndex="1" GridPane.columnIndex="1" WrapText ="true"/>
+
+        <Label text="Deadline" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="deadlinePicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    </GridPane>
+
+</content>
+
+</DialogPane>

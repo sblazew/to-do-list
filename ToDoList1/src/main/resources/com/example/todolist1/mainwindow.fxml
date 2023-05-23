@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="mainBorderPane" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.todolist1.Controller">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <items>
+                    <MenuItem text = "New task" onAction="#showNewItemDialog"/>
+                    <MenuItem text = "Edit" onAction="#handleEdit"/>
+                    <MenuItem text = "Delete" onAction="#handleDelete"/>
+
+                    <SeparatorMenuItem/>
+                    <MenuItem text = "Exit" onAction="#handleExit"/>
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <ListView fx:id="todoListView" onKeyPressed="#handleKeyPressed">
+
+        </ListView>
+    </left>
+    <center>
+        <VBox style="-fx-background-color: white">
+            <TextArea fx:id="taskDetailsTextArea" VBox.vgrow="ALWAYS" WrapText ="true"> //always gives max text area
+            </TextArea>
+            <HBox>
+                <Label text="Deadline: " style="-fx-background-color: white"> //style = css white backround
+                    <font>
+                        <Font name="Arial bold" size="15"/>
+                    </font>
+                </Label>
+                <Label fx:id="deadlineLabel" style="-fx-background-color: white">
+                    <font>
+                        <Font name="Arial bold" size="15"/>
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
